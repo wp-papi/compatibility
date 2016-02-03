@@ -1,0 +1,26 @@
+{
+  "name": "wp-papi/compatibility",
+  "type": "wordpress-plugin",
+  "license": "MIT",
+  "description": "Compatibility files for different plugins",
+  "homepage": "https://wp-papi.github.io",
+  "authors": [
+    {
+      "name": "Fredrik Forsmo",
+      "email": "fredrik.forsmo@gmail.com",
+      "homepage": "https://github.com/frozzare"
+    }
+  ],
+  "require": {
+    "php": "^5.5.9 || ^7.0"
+  },
+  "require-dev": {
+    "wp-coding-standards/wpcs": "dev-develop"
+  },
+  "scripts": {
+    "post-install-cmd": "if [ -f vendor/bin/phpcs ]; then \"vendor/bin/phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs; fi",
+    "post-update-cmd" : "if [ -f vendor/bin/phpcs ]; then \"vendor/bin/phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs; fi"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
