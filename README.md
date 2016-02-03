@@ -1,4 +1,4 @@
-# compatibility
+# Compatibility
 
 Compatibility files for different plugins.
 
